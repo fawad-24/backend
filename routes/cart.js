@@ -20,7 +20,7 @@ router.get("/", protect, async (req, res) => {
         name: i.productId.name,
         price: i.productId.price,
         images: i.productId.images.map(img =>
-          img.startsWith("http") ? img : `http://localhost:5000${img}`
+          img.startsWith("http") ? img : `https://backend-j44e.onrender.com${img}`
         )
       }
     }));
@@ -54,7 +54,7 @@ router.post("/add", protect, async (req, res) => {
       name: i.productId.name,
       price: i.productId.price,
       images: i.productId.images.map(img =>
-        img.startsWith("http") ? img : `http://localhost:5000${img}`
+        img.startsWith("http") ? img : `https://backend-j44e.onrender.com${img}`
       ),
       quantity: i.quantity
     }));
@@ -81,7 +81,7 @@ router.delete("/remove/:productId", protect, async (req, res) => {
       name: i.productId.name,
       price: i.productId.price,
       images: i.productId.images.map(img =>
-        img.startsWith("http") ? img : `http://localhost:5000${img}`
+        img.startsWith("http") ? img : `https://backend-j44e.onrender.com${img}`
       ),
       quantity: i.quantity
     }));
