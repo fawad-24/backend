@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://hali-magazasi-client.vercel.app",
   credentials: true
 }));
 
