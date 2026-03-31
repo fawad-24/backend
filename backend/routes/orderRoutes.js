@@ -47,7 +47,7 @@ router.get("/", requireAuth, async (req, res) => {
         name: i.productId?.name || "Ürün silinmiş",
         price: i.productId?.price || 0,
         images: i.productId?.images?.map(img =>
-          img.startsWith("http") ? img : `http://localhost:5000${img}`
+          img.startsWith("http") ? img : `https://backend-j44e.onrender.com${img}`
         ) || [],
         quantity: i.quantity
       }))
@@ -74,7 +74,7 @@ router.get("/my", requireAuth, async (req, res) => {
         name: i.productId?.name || "Ürün silinmiş",
         price: i.productId?.price || 0,
         images: i.productId?.images?.map(img =>
-          img.startsWith("http") ? img : `http://localhost:5000${img}`
+          img.startsWith("http") ? img : `https://backend-j44e.onrender.com${img}`
         ) || [],
         quantity: i.quantity
       }))
